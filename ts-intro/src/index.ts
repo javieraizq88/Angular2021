@@ -1,24 +1,7 @@
-interface Reproductor {
-    volumen: number;
-    segundo: number;
-    cancion: string;
-    detalles: Detalles 
-}
 
-interface Detalles {
-    autor: string;
-    anio: number;
-}
-
-const reproductor: Reproductor = {
-    volumen: 90,
-    segundo: 36,
-    cancion: 'Mess',
-    detalles: {
-        autor: 'Ed Sheeran',
-        anio: 2015
-    }
-}
-
-const { volumen, segundo, cancion, detalles } = reproductor;
-const { autor } = detalles;
+const dbz: string[] = ['Goku', 'Vegeta', 'Trunks'];
+const [ , , p3 ] = dbz;
+// no es necesario crear una constante para cada valor, se deja un espacio y una coma
+// console.log('Personaje 1:', p1 );
+// console.log('Personaje 2:', p2 );
+console.log('Personaje 3:', p3 );
