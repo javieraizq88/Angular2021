@@ -1,35 +1,24 @@
-
- interface SuperHeroe {
-     nombre: string;
-     edad: number;
-    // direccion: {
-    //     calle: string; 
-    //     pais:string;
-    //     ciudad:string
-    // } ,
-    direccion: Direccion,
-    mostrarDireccion: () => string;
+interface Reproductor {
+    volumen: number;
+    segundo: number;
+    cancion: string;
+    detalles: Detalles 
 }
 
-interface Direccion {
-    calle: string, 
-    pais: string,
-    ciudad: string
+interface Detalles {
+    autor: string;
+    anio: number;
 }
 
-const superHeroe: SuperHeroe = {
-    nombre: "Spiderman",
-    edad: 39,
-    direccion: {
-        calle: "Main St",
-        pais: "USA",
-        ciudad: "NY"
-    },
-
-    mostrarDireccion() {
-     return this.nombre + ', ' + this.direccion.ciudad + ', ' + this.direccion.pais;
-   }
+const reproductor: Reproductor = {
+    volumen: 90,
+    segundo: 36,
+    cancion: 'Mess',
+    detalles: {
+        autor: 'Ed Sheeran',
+        anio: 2015
+    }
 }
 
-const direccion = superHeroe.mostrarDireccion();
-console.log( direccion );
+const { volumen, segundo, cancion, detalles } = reproductor;
+const { autor } = detalles;
